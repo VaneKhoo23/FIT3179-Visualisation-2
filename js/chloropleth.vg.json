@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of Migrants per 100k Population by Country (2020)",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "equirectangular"},
+  "layer": [
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "white"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "data/data_migration.csv"
+            },
+            "key": "Country",
+            "fields": ["Migrants per 100k Population"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Migrants per 100k Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [99.0, 99.50, 100],
+            "range": ["#fdbe85", "#fd8d3c", "#fd8d3e", "#e6550d", "#a63603"]
+          }
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {"field": "Migrants per 100k Population", "type": "quantitative", "title": "Migration Rate"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [{"filter": "datum.properties.NAME== 'Greenland'"}],
+      "mark": {
+        "type": "text",
+        "font": "Open Sans",
+        "x": 110,
+        "y": 300,
+        "fontWeight": "bold",
+        "color": "seagreen",
+        "fontSize": 10
+      },
+      "encoding": {"text": {"value": ["Greenland has the HIGHEST Migration Rate."]}}
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [{"filter": "datum.properties.NAME== 'Greenland'"}],
+      "mark": {
+        "type": "text",
+        "font": "Open Sans",
+        "x": 110,
+        "y": 310,
+        "color": "black",
+        "fontSize": 9
+      },
+      "encoding": {"text": {"value": ["The reason why this could be is because there is FREE", "education, dental services and healthcare in Greenland!"]}}
+    }
+  ],
+  "config": {}
+ 
+}

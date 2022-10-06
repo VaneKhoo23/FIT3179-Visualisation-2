@@ -1,0 +1,160 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 500,
+    "title": "Number of Migrants by Country and GDP",
+    "data": {
+    "url": "data/data_migration.csv"
+    },
+    "mark": "circle",
+    "params": [
+        {
+          "name": "Population_Above",
+          "value": 0,
+          "bind": {
+            "input": "range",
+            "min": 100,
+            "max": 1000000000,
+            "step": 10000,
+            "name": "Minimum Population: "
+          }
+        },
+        {
+          "name": "Continent_selection",
+          "bind": {
+            "input": "select",
+            "options": [
+              null,
+              "Americas",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "labels": [
+              "All Continents",
+              "Americas",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "name": "Continent Selection: "
+          }
+        }
+      ],
+    "transform": [
+        {"filter": "datum.GDP >= 1"},
+        {"filter": "datum.Migrants > 0"},
+        {"filter": "datum.Population > Population_Above"},
+        {
+          "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+        }
+      ],
+    "encoding": {
+    "x": {
+        "field": "Migrants",
+        "type": "quantitative",
+        "title": "Number of Migrants",
+        "axis": {"tickCount": 7},
+        "scale": {"type": "log", "domain": [1, 10000000]}
+        },
+    "y": {
+        "field": "GDP",
+        "type": "quantitative",
+        "title": "GDP per Capita",
+        "axis": {"tickCount": 6},
+        "scale": {"type": "log", "domain": [1, 1000000]} 
+        }
+    },
+    "layer": [
+        {
+            "selection": {
+                "continent_highlight": {
+                  "type": "multi",
+                  "fields": ["Continent"],
+                  "bind": "legend"
+                }
+              },
+            "mark": "circle",
+            "encoding": {
+              "size": {
+                "field": "Population",
+                "type": "quantitative",
+                "scale": {
+                  "type": "threshold",
+                  "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+                  "range": [10, 50, 150, 200, 300, 400]
+                },
+                "legend": {"format": ".1s"}
+              },
+              "color": {
+                "field": "Continent",
+                "type": "nominal",
+                "scale": {
+                  "domain": [
+                    "Americas",
+                    "Europe",
+                    "Africa",
+                    "Asia",
+                    "Oceania"
+                  ],
+                  "range": [
+                    "#984ea3",
+                    "#f37736",
+                    "#fdf498",
+                    "#7bc043",
+                    "#0392cf"
+                  ]
+                }
+              },
+              "opacity": {
+                "condition": {"selection": "continent_highlight", "value": 0.85},
+                "value": 0.2
+              },
+              "tooltip": [
+                {"field": "Country", "type": "nominal"},
+                {"field": "Migrants", "type": "quantitative", "format": ","},
+                {"field": "GDP", "type": "quantitative", "format": ","},
+                {
+                  "field": "Migrants per 100k Population",
+                  "type": "quantitative",
+                  "format": ".2f"
+                }
+              ]
+            }
+        },
+        {
+            "mark": {
+              "type": "text",
+              "align": "right",
+              "baseline": "middle",
+              "dx": -12,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "Country", "type": "nominal"},
+              "color": {"value": "black"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['Country'] == 'China' || datum['Country'] == 'India' || datum['Country'] == 'United States of America'",
+                  "value": 1
+                },
+                "value": 0
+              },
+              "tooltip": [
+                {"field": "Country", "type": "nominal"},
+                {"field": "Migrants", "type": "quantitative", "format": ","},
+                {"field": "GDP", "type": "quantitative", "format": ","},
+                {"field": "Population", "type": "quantitative", "format": ","},
+                {
+                  "field": "Migrants per 100k Population",
+                  "type": "quantitative",
+                  "format": ".2f"
+                }
+              ]
+            }
+        }
+    ]
+}

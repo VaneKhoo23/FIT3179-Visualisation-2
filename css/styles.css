@@ -1,0 +1,40 @@
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+.page{
+  background-color: rgb(202, 237, 248);
+  margin: 0 auto;
+}
+
+.vis-container{
+  width: 100%;
+  margin: 0 auto; 
+  background-color: red;
+  display: inline-block;
+  align-items: center;
+}
+
+.l-box {
+  padding: 2em;
+}
+#map{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.description h2, h1{
+  margin-top:0px;
+}
+
+.description-middle{
+  padding-left: 0em;
+  margin-right: 0em;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+  <div class="page">
+    <div class="pure-g" style="position: relative; width:100%;">
+      <div class="pure-u-1-1">
+        <div class="l-box">
+          <h1><span style="color: #2145fa; font-weight:bold;">Global Migration Overview</span> 
+            <br>
+            <span style="font-weight:normal; font-size: 20px; font-style: italic;">in 2020</span></h1>
+            <p style="padding-left: 3em; padding-right: 3em;" > This aims to visualise migration statistics over the years in different countries as well as the relationship between the number of migrants and 
+              factors such as age group, gender and economy. The purpose of this simple webpage is for FIT3179 Homework Week 10.</p>
+        </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto;">
+          <div id="chloropleth"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
+        <div class="pure-u-1-4">
+          <div class="description description-middle">
+            <h2> Migrations By Country and GDP</h2>
+            <p>We can see that the <span style="font-weight:bold;">United States of America </span>, <span style="font-weight:bold;">China</span> and <span style="font-weight:bold;">India </span> has the highest number of incoming migrants. 
+              An interesting finding is that although <span style="font-weight:bold;">India has a much lower GDP Per Capita compared to China</span>, they had 
+              <span style="font-weight:bold;">1,380,004 </span> migrants in 2020,
+              which is only <span style="font-weight:bold;">~60,000</span> lower compared to 
+              <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
+          </div>
+          </div>
+        <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
+          <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
+            <div id="bubble"></div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+<script type="text/javascript">
+
+  var spec1 = "js/chloropleth.vg.json";
+  vegaEmbed('#chloropleth', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "js/bubble.vg.json";
+  vegaEmbed('#bubble', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
