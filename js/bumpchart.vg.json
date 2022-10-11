@@ -68,7 +68,7 @@
                         ]
                     },
                     "axis": {
-                        "title": "World Rank",
+                        "title": "Rank",
                         "titleFontSize": 14,
                         "tickCount": 10,
                         "values": [
@@ -121,7 +121,7 @@
                     {
                         "field": "Rank",
                         "type": "quantitative",
-                        "title": "World rank"
+                        "title": "Rank"
                     }
                 ]
             }

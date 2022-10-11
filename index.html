@@ -38,17 +38,37 @@
     </div>
 
     <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1" style="padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto;">
-          <div style="display: table; margin: 0 auto;">
-            <h1>Where are People Migrating to? &#128205;</h1>
+      <div class="pure-u-1-1">
+        <div class="description description-middle">
+          <div class="inner">
+            <h1 style="color: white">Where are People Migrating to?</h1>
             <p style=" text-align: center;">At a glance, we can observe clearly that there are a few main regions that have a high migration rate: 
               <br>
-              <span style="font-weight: bold; color: #a63603">Greenland, Countries in Eastern Europe, Japan, Cuba</span>
-               and <span style="font-weight: bold; color: #a63603">Venezuala.</span>
+              <span style="font-weight: bold; color: #bf0000">Greenland, Countries in Eastern Europe, Japan, Cuba</span>
+               and <span style="font-weight: bold; color: #bf0000">Venezuala.</span>
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto;">
           <div id="chloropleth"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1">
+        <div class="description description-middle">
+          <div class="inner">
+            <h1 style="color: white;">Which are the Top 10 countries?</h1>
+            <p>(based on number of migrants alone, not the migration rate)</p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -56,10 +76,6 @@
     <div class="pure-g" style="position: relative; width:100%; ">
       <div class="pure-u-1-1" style="padding-bottom: 2em;">
         <div style="display: table; margin: 0 auto;">
-          <div style="display: table; margin: 0 auto;">
-            <h1>Which are the Top 10 countries?</h1>
-            <p>(based on number of migrants alone, not the migration rate)</p>
-          </div>
           <div id="bump"></div>
         </div>
       </div>
@@ -69,40 +85,38 @@
       <div class="pure-u-1-1" style="padding-bottom: 2em;">
         <div style="display: table; margin: 0 auto;">
           <div style="display: table; margin: 0 auto;">
-            <p>to insert: interesting data viz about USA immigrants</p>
+            <p></p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1" style="padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto;">
-          <div style="display: table; margin: 0 auto;">
-            <h1>Who is immigrating?</h1>
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1">
+        <div class="description description-middle">
+          <div class="inner">
+            <h1 style="color: white;">Who is immigrating?</h1>
+            <p>We can see that the <span style="font-weight:bold;">United States of America </span>, <span style="font-weight:bold;">China</span> and <span style="font-weight:bold;">India </span> has the highest number of incoming migrants. 
+              An interesting finding is that although <span style="font-weight:bold;">India has a much lower GDP Per Capita compared to China</span>, they had 
+              <span style="font-weight:bold;">1,380,004 </span> migrants in 2020,
+              which is only <span style="font-weight:bold;">~60,000</span> lower compared to 
+              <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
           </div>
-          <div id="donut"></div>
-          <div id="pyramid"></div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
       <div class="pure-u-1-4">
-        <div class="description description-middle">
-          
-          <p>We can see that the <span style="font-weight:bold;">United States of America </span>, <span style="font-weight:bold;">China</span> and <span style="font-weight:bold;">India </span> has the highest number of incoming migrants. 
-            An interesting finding is that although <span style="font-weight:bold;">India has a much lower GDP Per Capita compared to China</span>, they had 
-            <span style="font-weight:bold;">1,380,004 </span> migrants in 2020,
-            which is only <span style="font-weight:bold;">~60,000</span> lower compared to 
-            <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
-        </div>
-        </div>
-      <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
-        <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
+        <div style="display: table; margin: 0 auto; background-color: #CAEDF8; width: 40px; padding-left: 1em; padding-right: 1em;">
           <div id="donut"></div>
+        </div>
+      </div>
+      <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto; background-color: #CAEDF8; width: 40px; padding-left: 1em; padding-right: 1em;">
           <div id="pyramid"></div>
         </div>
+        
       </div>
   </div>
 
@@ -111,8 +125,13 @@
 
 
     <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
+        <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
+          <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
+            <div id="bubble"></div>
+          </div>
+        </div>
         <div class="pure-u-1-4">
-          <div class="description description-middle">
+          <div class="description">
             <h2> Migrations By Country and GDP</h2>
             <p>We can see that the <span style="font-weight:bold;">United States of America </span>, <span style="font-weight:bold;">China</span> and <span style="font-weight:bold;">India </span> has the highest number of incoming migrants. 
               An interesting finding is that although <span style="font-weight:bold;">India has a much lower GDP Per Capita compared to China</span>, they had 
@@ -120,16 +139,21 @@
               which is only <span style="font-weight:bold;">~60,000</span> lower compared to 
               <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
           </div>
-          </div>
-        <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
-          <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
-            <div id="bubble"></div>
-          </div>
         </div>
     </div>
 
 
-
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1">
+        <div class="description description-middle">
+          <div class="inner">
+            <h1 style="color: white;">What is the Flow of Migration? (2020)</h1>
+            <p></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="pure-g" style="position: relative; width:100%; ">
       <div class="pure-u-1-1" style="padding-bottom: 2em;">

@@ -42,8 +42,8 @@
       {
         "layer": [
           {
-            "width": 250,
-            "height": 300,
+            "width": 150,
+            "height": 200,
             "transform": [{"filter": "datum.Gender == 'Female'"}],
             "title": "Female",
             "mark": "bar",
@@ -56,7 +56,7 @@
               },
               "color": {
                 "field": "Gender",
-                "scale": {"range": ["#f4c2c2", "#89CFF0"]},
+                "scale": {"range": ["#CC5500", "#65748e"]},
                 "legend": null
               },
               "tooltip": [
@@ -100,7 +100,7 @@
               },
               "text": {"aggregate": "sum", "field": "Migrants", "type": "quantitative"},
               "color": {
-                "value": "#89CFFF"
+                "value": "#65748e"
               }
             }
           }
@@ -114,8 +114,8 @@
       {
         "layer": [
           {
-            "width": 250,
-            "height": 300,
+            "width": 150,
+            "height": 200,
             "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
             "title": "Male",
             "mark": "bar",
@@ -129,7 +129,7 @@
               "x": {"aggregate": "sum", "field": "Migrants"},
               "color": {
                 "field": "gender",
-                "scale": {"range": ["#f4c2c2", "#89CFF0"]},
+                "scale": {"range": ["#CC5500", "#CC5500"]},
                 "legend": null
               },
               "tooltip": [
@@ -149,7 +149,7 @@
             "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
             "view": {"stroke": "white"},
             "background": {"expr": "white"},
-            "mark": {"type": "text", "align": "right", "xOffset": 90, "baseline": "middle", "dx": 80, "fontSize": 10, "color": "#f4c2c2"},
+            "mark": {"type": "text", "align": "right", "xOffset": 90, "baseline": "middle", "dx": 80, "fontSize": 10, "color": "#CC5500"},
             "encoding": {
               "y": {
                 "field": "Age Group",
@@ -159,7 +159,7 @@
               },
               "text": {"aggregate": "sum", "field": "Migrants", "type": "quantitative"},
               "color": {
-                "value": "#f4c2c2"
+                "value": "#CC5500"
               }
             }
           }
