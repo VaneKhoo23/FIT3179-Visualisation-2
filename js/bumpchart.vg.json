@@ -1,0 +1,137 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Bump chart",
+    "title": {
+        "text": "Top 10 Ranked Countries based on the Number of Migrants since 1990",
+        "fontSize": 16
+    },
+    "width": 600,
+    "height": 400,
+    "background": "#CAEDF8",
+    "grid": true,
+    "gridColor": "black",
+    "data": {
+        "url":  "data/bumpchart.csv"
+    },
+    "transform": [
+        {
+            "filter": "datum.Rank <= 10"
+        }
+    ],
+    "layer": [
+        {
+            "selection": {
+                "country_highlight": {
+                    "type": "multi",
+                    "fields": [
+                        "Country"
+                    ],
+                    "bind": "legend"
+                }
+            },
+            "mark": {
+                "type": "line",
+                "point": {
+                    "size": 300
+                },
+                "size": 5
+            },
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "ordinal",
+                    "axis": {
+                        "title": "Year",
+                        "titleFontSize": 14,
+                        "tickCount": 14,
+                        "values": [
+                            1990,
+                            1995,
+                            2000,
+                            2005,
+                            2010,
+                            2015,
+                            2020
+                        ],
+                        "labelAngle": -45,
+                        "labelFontSize": 14
+                    }
+                },
+                "y": {
+                    "field": "Rank",
+                    "type": "quantitative",
+                    "sort": "descending",
+                    "scale": {
+                        "domain": [
+                            0,
+                            11
+                        ]
+                    },
+                    "axis": {
+                        "title": "World Rank",
+                        "titleFontSize": 14,
+                        "tickCount": 10,
+                        "values": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10
+                        ],
+                        "labelFontSize": 14
+                    }
+                },
+                "order": {
+                    "field": "Year",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Country",
+                    "scale": {
+                        "scheme": "category20"
+                    },
+                    "legend": {
+                        "labelFontSize": 12,
+                        "titleFontSize": 14
+                    }
+                },
+                "opacity": {
+                    "condition": {
+                        "selection": "country_highlight",
+                        "value": 1
+                    },
+                    "value": 0.1
+                },
+                "tooltip": [
+                    {
+                        "field": "Year",
+                        "type": "ordinal",
+                        "title": "Year"
+                    },
+                    {
+                        "field": "Country",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "Rank",
+                        "type": "quantitative",
+                        "title": "World rank"
+                    }
+                ]
+            }
+        }
+    ],
+    "config": {
+        "style": {
+            "cell": {
+                "stroke": "gray"
+            }
+        }
+    } 
+}

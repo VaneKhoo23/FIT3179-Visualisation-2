@@ -3,6 +3,9 @@
   "title": "Number of Migrants per 100k Population by Country (2020)",
   "width": 800,
   "height": 400,
+  "background": "#CAEDF8",
+  "grid": true,
+  "gridColor": "black",
   "projection": {"type": "equirectangular"},
   "layer": [
     {
@@ -44,8 +47,17 @@
           "scale": {
             "type": "threshold",
             "domain": [99.0, 99.50, 100],
-            "range": ["#fdbe85", "#fd8d3c", "#fd8d3e", "#e6550d", "#a63603"]
-          }
+            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+          },
+          "legend": {
+            "title": "Migrants per 100k Population",
+            "titleFontSize": 11,
+            "direction": "horizontal",
+            "orient": "bottom-left",
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "gradientLength": 200
+        }
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
@@ -61,12 +73,12 @@
       "transform": [{"filter": "datum.properties.NAME== 'Greenland'"}],
       "mark": {
         "type": "text",
-        "font": "Open Sans",
-        "x": 110,
-        "y": 300,
+        "font": "Source Sans Pro",
+        "x": 113,
+        "y": 200,
         "fontWeight": "bold",
         "color": "seagreen",
-        "fontSize": 10
+        "fontSize": 11
       },
       "encoding": {"text": {"value": ["Greenland has the HIGHEST Migration Rate."]}}
     },
@@ -78,15 +90,21 @@
       "transform": [{"filter": "datum.properties.NAME== 'Greenland'"}],
       "mark": {
         "type": "text",
-        "font": "Open Sans",
-        "x": 110,
-        "y": 310,
+        "font": "Source Sans Pro",
+        "x": 113,
+        "y": 212,
         "color": "black",
-        "fontSize": 9
+        "fontSize": 10
       },
-      "encoding": {"text": {"value": ["The reason why this could be is because there is FREE", "education, dental services and healthcare in Greenland!"]}}
+      "encoding": {"text": {"value": ["The reason why this could be is because", "there is FREE education, dental services", "& healthcare in Greenland!"]}}
     }
   ],
-  "config": {}
+  "config": {
+    "style": {
+        "cell": {
+            "stroke": "gray"
+        }
+    }
+  } 
  
 }

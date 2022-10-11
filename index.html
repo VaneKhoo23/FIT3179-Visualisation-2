@@ -21,21 +21,94 @@
     <div class="pure-g" style="position: relative; width:100%;">
       <div class="pure-u-1-1">
         <div class="l-box">
-          <h1><span style="color: #2145fa; font-weight:bold;">Global Migration Overview</span> 
-            <br>
-            <span style="font-weight:normal; font-size: 20px; font-style: italic;">in 2020</span></h1>
-            <p style="padding-left: 3em; padding-right: 3em;" > This aims to visualise migration statistics over the years in different countries as well as the relationship between the number of migrants and 
-              factors such as age group, gender and economy. The purpose of this simple webpage is for FIT3179 Homework Week 10.</p>
+          <h1>
+            <span id="title">An Overview of <br>GLOBAL MIGRATION</span>
+          </h1>
+            <p style="padding-left: 6em; padding-right: 6em; text-align: justify;">Since the earliest times, humanity has been on the move. Some people move in search of work or economic opportunities, to 
+              join family, or to study. Others move to escape conflict, persecution, terrorism, or human rights violations. Countries depend on past data from
+              the 
+              <span style="font-weight: bold; color: darkblue">United Nations Department of Economic and Social Affairs's (UNDESA) Global Migration Database</span>, in order to 
+              <span style="font-weight: bold; color: black"> estimate, manage and analyse migration trends.</span> 
+              The data is derived from the Demographic Yearbook, produced by the Statistics Division of UNDESA, the Population Division as well as 
+              official publications available from resource centers, libraries and the internet.
+              Thus, this visualisation aims to 
+              <span style="font-weight: bold; color: darkblue">analyse migration statistics</span> over the years in different countries as well as the 
+              <span style="font-weight: bold; color: darkblue"> relationship between migration and factors such as age group, gender and economy.</span></p>
         </div>
     </div>
 
     <div class="pure-g" style="position: relative; width:100%; ">
       <div class="pure-u-1-1" style="padding-bottom: 2em;">
         <div style="display: table; margin: 0 auto;">
+          <div style="display: table; margin: 0 auto;">
+            <h1>Where are People Migrating to? &#128205;</h1>
+            <p style=" text-align: center;">At a glance, we can observe clearly that there are a few main regions that have a high migration rate: 
+              <br>
+              <span style="font-weight: bold; color: #a63603">Greenland, Countries in Eastern Europe, Japan, Cuba</span>
+               and <span style="font-weight: bold; color: #a63603">Venezuala.</span>
+            </p>
+          </div>
           <div id="chloropleth"></div>
         </div>
       </div>
     </div>
+
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto;">
+          <div style="display: table; margin: 0 auto;">
+            <h1>Which are the Top 10 countries?</h1>
+            <p>(based on number of migrants alone, not the migration rate)</p>
+          </div>
+          <div id="bump"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto;">
+          <div style="display: table; margin: 0 auto;">
+            <p>to insert: interesting data viz about USA immigrants</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto;">
+          <div style="display: table; margin: 0 auto;">
+            <h1>Who is immigrating?</h1>
+          </div>
+          <div id="donut"></div>
+          <div id="pyramid"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
+      <div class="pure-u-1-4">
+        <div class="description description-middle">
+          
+          <p>We can see that the <span style="font-weight:bold;">United States of America </span>, <span style="font-weight:bold;">China</span> and <span style="font-weight:bold;">India </span> has the highest number of incoming migrants. 
+            An interesting finding is that although <span style="font-weight:bold;">India has a much lower GDP Per Capita compared to China</span>, they had 
+            <span style="font-weight:bold;">1,380,004 </span> migrants in 2020,
+            which is only <span style="font-weight:bold;">~60,000</span> lower compared to 
+            <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
+        </div>
+        </div>
+      <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
+        <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
+          <div id="donut"></div>
+          <div id="pyramid"></div>
+        </div>
+      </div>
+  </div>
+
+
+
+
 
     <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
         <div class="pure-u-1-4">
@@ -55,6 +128,17 @@
         </div>
     </div>
 
+
+
+    
+    <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="padding-bottom: 2em;">
+        <div style="display: table; margin: 0 auto;">
+          <div id="chord"></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
@@ -71,6 +155,26 @@
 
   var spec2 = "js/bubble.vg.json";
   vegaEmbed('#bubble', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec3 = "js/donut.vg.json";
+  vegaEmbed('#donut', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec4 = "js/pyramid.vg.json";
+  vegaEmbed('#pyramid', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec5 = "js/bumpchart.vg.json";
+  vegaEmbed('#bump', spec5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec6 = "js/chordchart.vg.json";
+  vegaEmbed('#chord', spec6).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
