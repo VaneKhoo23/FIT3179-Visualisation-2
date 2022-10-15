@@ -158,6 +158,23 @@
         "domain": ["stk1", "stk2"]
       }
     ],
+    "axes": [
+      {
+        "orient": "bottom",
+        "scale": "x",
+        "encode": {
+          "labels": {
+            "update": {
+              "fontSize": {"value": 14},
+              "text": {
+                "scale": "stackNames", 
+                "field": "value"
+              }
+            }
+          }
+        }
+      }
+    ],
     "marks": [
       {
         "type": "path",
