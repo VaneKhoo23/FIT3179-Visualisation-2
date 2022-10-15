@@ -3,11 +3,18 @@
   "title": "Number of Migrants per 100k Population by Country (2020)",
   "width": 800,
   "height": 400,
-  "background": "#CAEDF8",
+  "background": "#f6eee3",
   "grid": true,
   "gridColor": "black",
-  "projection": {"type": "equirectangular"},
   "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "#CAEDF8"}, 
+      "projection": {"type": "equirectangular", "color": "BLACK"}
+    },
     {
       "data": {
         "url": "js/ne_110m.json",
@@ -20,6 +27,7 @@
         }
       ],
       "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "white"},
+      "projection": {"type": "equirectangular"},
       "encoding": {"tooltip": {"field": "note"}}
     },
     {
@@ -64,6 +72,13 @@
           {"field": "Migrants per 100k Population", "type": "quantitative", "title": "Migration Rate"}
         ]
       }
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "stroke": "lightgrey"}
     },
     {
       "data": {
