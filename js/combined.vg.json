@@ -1,6 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
+    "title": {
+      "text": "Migrants by Age Group & Gender",
+      "fontSize": 16,
+      "anchor": "middle"
+  },
     "background": "#f6eee3",
     "grid": true,
     "gridColor": "black",

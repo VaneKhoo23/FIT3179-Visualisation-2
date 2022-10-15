@@ -9,8 +9,14 @@ p {
   text-align: center;
 }
 
+hr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  fill:black;
+}
+
 .page{
-  background-color: #ECECEC;
+  background-color: #F5F5F5;
   margin: 0 auto;
 }
 
@@ -37,17 +43,31 @@ p {
   margin: 0 auto;
 }
 
-.description h2, h1{
+.box h2, h1{
   margin-top:0px;
 }
 
-.description-middle{
-  padding-left: 4em;
-  padding-right:4em;
+.box{
+  padding-left: 0em;
+  padding-right:0em;
   padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-bottom: 1.5em;
+  border-radius: 15px;
+  box-shadow: 5px 10px 8px #888888;
+  width: 100%;
 }
 
 .inner {
-  background-color: #3895d3; padding-left: 4em;padding-right:4em;padding-top: 0.5em;padding-bottom: 0.5em;margin-bottom: 2em;
+  background-color: #f7e7ce; padding-left: 4em;padding-right:4em;padding-top: 0em;padding-bottom: 0em;margin-bottom: 0em;
+}
+
+.innerbox {
+  background-color: #f7e7ce; padding-left: 4em;padding-right:4em;padding-top: 0.5em;padding-bottom: 0em;margin-bottom: 0em;border-radius: 15px;
+}
+
+#icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }

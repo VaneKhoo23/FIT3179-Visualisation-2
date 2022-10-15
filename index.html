@@ -14,143 +14,168 @@
   <!-- Import pure.css -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="/static/favicon.ico">
   
 </head>
 <body>
   <div class="page">
+
     <div class="pure-g" style="position: relative; width:100%;">
       <div class="pure-u-1-1">
         <div class="l-box">
           <h1>
-            <span id="title">An Overview of <br>GLOBAL MIGRATION</span>
+            <span id="title">GLOBAL MIGRATION</span>
           </h1>
             <p style="padding-left: 6em; padding-right: 6em; text-align: justify;">Since the earliest times, humanity has been on the move. Some people move in search of work or economic opportunities, to 
               join family, or to study. Others move to escape conflict, persecution, terrorism, or human rights violations. Countries depend on past data from
               the 
               <span style="font-weight: bold; color: darkblue">United Nations Department of Economic and Social Affairs's (UNDESA) Global Migration Database</span>, in order to 
               <span style="font-weight: bold; color: black"> estimate, manage and analyse migration trends.</span> 
-              The data is derived from the Demographic Yearbook, produced by the Statistics Division of UNDESA, the Population Division as well as 
-              official publications available from resource centers, libraries and the internet.
-              Thus, this visualisation aims to 
+              The data is derived from the Demographic Yearbook, the Population Division as well as official publications available from resource centers, libraries and the internet.
+              This visualisation aims to 
               <span style="font-weight: bold; color: darkblue">analyse migration statistics</span> over the years in different countries as well as the 
               <span style="font-weight: bold; color: darkblue"> relationship between migration and factors such as age group, gender and economy.</span></p>
         </div>
     </div>
 
     <div class="pure-g" style="position: relative; width:100%; ">
+      <div class="pure-u-1-1" style="background-color: #F5F5F5;">
+        <div style="display: table; margin: 0 auto;">
+          <div class="box" style="background-color: #f7e7ce; width: 1000px">
+
+            <div class="innerbox">
+              <h1 style="color: #00008b; font-size: 28px;">Where are People Migrating to? &#127758</h1>
+              <p style=" text-align: center;">At a glance, we can observe clearly that there are a few main regions that have a high migration rate: 
+                <br>
+                <span style="font-weight: bold;">Greenland, Countries in Eastern Europe, Japan, Cuba</span>
+                and <span style="font-weight: bold;">Venezuala.</span>
+              </p>
+              <hr>
+            </div>
+            <div class="chartbox" style="display: table; margin: 0 auto;padding-left:2.5em;" >
+              <div id="chloropleth"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%; margin-top: 3em; ">
+      <div class="pure-u-1-1" style="background-color: #F5F5F5;">
+        <div style="display: table; margin: 0 auto;">
+          <div class="box" style="background-color: #f7e7ce; width: 1000px">
+
+            <div class="innerbox">
+              <h1 style="color: #00008b; font-size: 28px;">Which are the Top 10 Countries of Migration? &#127758</h1>
+              <p style=" text-align: justify;">
+                Let's see the ranking of countries by the number of people who migrated by each 5-year period. From the chart,
+                <span style="font-weight: bold; color: #E75480">United States of America (USA)</span> has had the <span style="font-weight: bold;">highest 
+                number of migrants</span> across the years. 
+                
+                <br> <br>
+                There are many pull factors for people to migrate to the USA. To name a few: 
+                <span style="font-weight: bold;">High standards of education</span> (especially tertiary education), 
+                <span style="font-weight: bold;">Many career opportunities</span> (USA ranks in the top five countries for workforce productivity),
+                <span style="font-weight: bold;">Better living conditions</span>, especially in big cities like New York and L.A.
+
+              </p>
+              <hr>
+              
+            </div>
+
+            <div class="chartbox" style="display: table; margin: 0 auto;padding-left:2.5em;" >
+              <div id="bump"></div>
+            </div>
+
+            <div class="innerbox">
+              <h1 style="color: #00008b; font-size: 20px;">USA's Migration Trend</h1>
+              <p style=" text-align: center;">We now analyse the migration trend for USA, the country with the highest amount of migrants.
+              </p>
+              <hr>
+            </div>
+            
+
+            <div class="chartbox" style="display: table; margin: 0 auto;padding-left:2.5em;" >
+              <div id="line"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pure-g" style="position: relative; width:100%; margin-top: 3em;">
+      <div class="pure-u-1-1" style="background-color: #F5F5F5;">
+        <div style="display: table; margin: 0 auto;">
+          <div class="box" style="background-color: #f7e7ce; width: 1000px">
+
+            <div class="innerbox">
+              <h1 style="color: #00008b; font-size: 28px;">Who is Immigrating? &#127758</h1>
+              <p style=" text-align: justify;">We can observe the <span style="font-weight: bold;">proportion of each gender</span> overall in the donut chart (right), or based on each age group in the population pyramid 
+                (left). Toggle the continent selection drop down to analyse the proportion for specific continents!
+              </p>
+              <hr>
+            </div>
+            <div class="chartbox" style="display: table; margin: 0 auto;padding-left:2.5em;" >
+              <div id="combined"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%; margin-top: 3em;">
+      <div class="pure-u-1-1" style="background-color: #F5F5F5;">
+        <div style="display: table; margin: 0 auto;">
+          <div class="box" style="background-color: #f7e7ce; width: 1000px">
+
+            <div class="innerbox">
+              <h1 style="color: #00008b; font-size: 28px;">Flow of Migration &#127758</h1>
+              <p style=" text-align: justify;">The <span style="font-weight: bold; color:#00008b">flow of migration</span> 
+                highlights which continents migrants from one continent are migrating to.
+                In this chart, we can analyse the flow of migration overall from each <span style="font-weight: bold; color:#00008b">origin continent</span> (left) to the 
+                <span style="font-weight: bold; color:#00008b">destination continent</span> (right).
+                <br>
+                From the chart, we can observe that the majority of migrants are from <span style="font-weight: bold; color:#356594">Africa</span>, and a majority of them
+                are migrating to countries in <span style="font-weight: bold; color:rgb(62, 161, 85)">Oceania</span>.
+                <br>
+                We can also drill down on this chart by selecting on a continent's section of the bar on either side ("Origin" or "Destination")
+                to see the proportions for only a specific continent to/from other continents.
+              </p>
+              <hr>
+            </div>
+            <div class="chartbox" style="display: table; margin: 0 auto;padding-left:2.5em;" >
+              <div id="chord"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pure-g" style="position: relative; width:100%;">
       <div class="pure-u-1-1">
-        <div class="description description-middle">
-          <div class="inner">
-            <h1 style="color: white">Where are People Migrating to?</h1>
-            <p style=" text-align: center;">At a glance, we can observe clearly that there are a few main regions that have a high migration rate: 
-              <br>
-              <span style="font-weight: bold; color: #bf0000">Greenland, Countries in Eastern Europe, Japan, Cuba</span>
-               and <span style="font-weight: bold; color: #bf0000">Venezuala.</span>
+        <div class="l-box">
+          <h1>
+            <span style="font-size: 1.2em; color:#00008b; text-align: left;">Conclusion</span>
+          </h1>
+            <p style="padding-left: 6em; padding-right: 6em; text-align: justify;">
+              Today, we can see that more people than ever live and become citizens in countries other than the one in which they were born in.
+              Many individuals migrate either out of choice, or out of necessity. Therefore, from this visualisation we are able to
+              inspect which countries and continents these immigrants are migrating to. 
+              We have observed that there are many migrations that happen on a yearly basis, and therefore with so many migrations there is definitely a need to promote international cooperation 
+              on migration issues (complications, migrant deaths, displaced migrants).
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1" style="padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto;">
-          <div id="chloropleth"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1">
-        <div class="description description-middle">
-          <div class="inner">
-            <h1 style="color: white;">Which are the Top 10 countries?</h1>
-            <p>(based on number of migrants alone, not the migration rate)</p>
+            <p style="padding-left: 6em; padding-right: 6em; text-align: center;">
+              Copyright © 2022 Vanessa Khoo Ming Yi
             </p>
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1" style="padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto;">
-          <div id="bump"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1" style="padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto;">
-          <div id="line"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1">
-        <div class="description description-middle">
-          <div class="inner">
-            <h1 style="color: white;">Who is immigrating?</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
-      <div class="pure-u-1-1">
-        <div style="display: table; margin: 0 auto; background-color: #f6eee3; width: 40px; padding-left: 1em; padding-right: 1em;">
-          <div id="combined"></div>
-        </div>
-      </div>
-  </div>
-
-
-
-
-
-    <!-- <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
-        <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
-          <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
-            <div id="bubble"></div>
-          </div>
-        </div>
-        <div class="pure-u-1-4">
-          <div class="description">
-            <h2> Migrations By Country and GDP</h2>
-            <p>We can see that the <span style="font-weight:bold;">United States of America </span>, <span style="font-weight:bold;">China</span> and <span style="font-weight:bold;">India </span> has the highest number of incoming migrants. 
-              An interesting finding is that although <span style="font-weight:bold;">India has a much lower GDP Per Capita compared to China</span>, they had 
-              <span style="font-weight:bold;">1,380,004 </span> migrants in 2020,
-              which is only <span style="font-weight:bold;">~60,000</span> lower compared to 
-              <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
-          </div>
-        </div>
-    </div> -->
-
-
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1">
-        <div class="description description-middle">
-          <div class="inner">
-            <h1 style="color: white;">What is the Flow of Migration? (2020)</h1>
-            <p></p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="pure-g" style="position: relative; width:100%; ">
-      <div class="pure-u-1-1" style="padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto;">
-          <div id="chord"></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 
 

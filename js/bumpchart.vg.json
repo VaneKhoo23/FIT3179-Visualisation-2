@@ -5,11 +5,9 @@
         "text": "Top 10 Ranked Countries based on the Number of Migrants since 1990",
         "fontSize": 16
     },
-    "width": 600,
+    "width": 595,
     "height": 400,
     "background": "#f6eee3",
-    "grid": true,
-    "gridColor": "black",
     "data": {
         "url":  "data/bumpchart.csv"
     },
@@ -153,7 +151,7 @@
                 {"field": "Number of Migrants", "title": "Number of Migrants"}
               ]
             }
-          }
+        }
     ],
     "config": {
         "style": {
