@@ -1,0 +1,289 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "background": "#f6eee3",
+    "grid": true,
+    "gridColor": "black",
+    "params": [
+      {
+        "name": "Continent_Selection",
+        "value": "All",
+        "bind": {
+          "input": "select",
+          "options": [
+            "All",
+            "Africa",
+            "Asia",
+            "Europe",
+            "Americas",
+            "Oceania"
+          ],
+          "labels": [
+            "All Continents",
+            "Africa",
+            "Asia",
+            "Europe",
+            "Americas",
+            "Oceania"
+          ],
+          "name": "Continent Selection: "
+        }
+      }
+    ],
+    "spacing": 0,
+    "hconcat": [
+      {
+        "data": {
+          "url": "data/4_population_pyramid.csv"
+        },
+        "transform": [
+          {
+              "filter": "datum.Region == Continent_Selection"
+          }
+        ],
+        "layer": [
+          {
+            "width": 150,
+            "height": 200,
+            "transform": [{"filter": "datum.Gender == 'Female'"}],
+            "title": "Female",
+            "mark": "bar",
+            "encoding": {
+              "y": {"field": "Age Group", "axis": null, "sort": "descending"},
+              "x": {
+                "aggregate": "sum",
+                "field": "Migrants",
+                "sort": "descending",
+                "title": "Total Migrants"
+              },
+              "color": {
+                "field": "Gender",
+                "scale": {"range": ["#CC5500", "#65748e"]},
+                "legend": null
+              },
+              "tooltip": [
+                {"field": "Gender", "type": "nominal"},
+                {
+                  "aggregate": "sum",
+                  "field": "Migrants",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Total Migrants"
+                },
+                {"field": "Age Group", "type": "ordinal"}
+              ]
+            }
+          },
+          {
+            "width": 35,
+            "view": {"stroke": null},
+            "mark": {"type": "text", "align": "center", "dx": 95},
+            "encoding": {
+              "y": {
+                "field": "Age Group",
+                "type": "ordinal",
+                "axis": null,
+                "sort": "descending"
+              },
+              "text": {"field": "Age Group", "type": "ordinal"}
+            }
+          },
+          {
+            "width": 20,
+            "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+            "view": {"stroke": "white"},
+            "background": {"expr": "white"},
+            "mark": {"type": "text", "align": "left", "xOffset": -50, "baseline": "middle", "dx": -80, "fontSize": 10, "color": "#89CFFF"},
+            "encoding": {
+              "y": {
+                "field": "Age Group",
+                "type": "ordinal",
+                "axis": null,
+                "sort": "descending"
+              },
+              "text": {"aggregate": "sum", "field": "Migrants", "type": "quantitative"},
+              "color": {
+                "value": "#65748e"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "data": {
+          "url": "data/4_population_pyramid.csv"
+        },
+        "transform": [
+          {
+              "filter": "datum.Region == Continent_Selection"
+          }
+        ],
+        "layer": [
+          {
+            "width": 150,
+            "height": 200,
+            "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+            "title": "Male",
+            "mark": "bar",
+            "encoding": {
+              "y": {
+                "field": "Age Group",
+                "title": null,
+                "axis": null,
+                "sort": "descending"
+              },
+              "x": {"aggregate": "sum", "field": "Migrants","title": "Total Migrants"},
+              "color": {
+                "field": "Gender",
+                "scale": {"range": ["#CC5500", "#65748e"]},
+                "legend": null
+              },
+              "tooltip": [
+                {"field": "Gender", "type": "nominal"},
+                {
+                  "aggregate": "sum",
+                  "field": "Migrants",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Total Migrants"
+                },
+                {"field": "Age Group", "type": "ordinal"}
+              ]
+            }
+          },
+          {
+            "width": 20,
+            "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+            "view": {"stroke": "white"},
+            "background": {"expr": "white"},
+            "mark": {"type": "text", "align": "right", "xOffset": 50, "baseline": "middle", "dx": 80, "fontSize": 10, "color": "#CC5500"},
+            "encoding": {
+              "y": {
+                "field": "Age Group",
+                "type": "ordinal",
+                "axis": null,
+                "sort": "descending"
+              },
+              "text": {"aggregate": "sum", "field": "Migrants", "type": "quantitative"},
+              "color": {
+                "value": "#CC5500"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "data": { 
+          "url": "data/3_gender_pie.csv"
+          },
+          "transform": [
+            {
+                "filter": "datum.Year == 'All'"
+            },
+            {
+                "filter": "datum.Region == Continent_Selection"
+            }
+        ],
+        "width": 270,
+        "height": 180,
+        "layer": [
+          {
+              "mark": {
+                  "type": "arc",
+                  "innerRadius": 50
+              },
+              "encoding": {
+                  "theta": {
+                      "field": "Gender Percent",
+                      "type": "quantitative"
+                  },
+                  "color": {
+                      "field": "Gender",
+                      "type": "nominal",
+                      "scale": {
+                          "domain": [
+                              "Male",
+                              "Female"
+                          ]
+                      }
+                  },
+                  "tooltip": [
+                      {
+                          "field": "Year",
+                          "type": "nominal",
+                          "title": "Year"
+                      },
+                      {
+                          "field": "Gender",
+                          "type": "nominal",
+                          "title": "Gender"
+                      },
+                      {
+                          "field": "Region",
+                          "type": "nominal",
+                          "title": "Continent"
+                      },
+                      {
+                          "field": "Gender Percent",
+                          "type": "quantitative",
+                          "title": "Percentage"
+                      }
+                  ]
+              }
+          },
+          {
+              "mark": {
+                  "type": "text",
+                  "fontSize": 12
+              },
+              "encoding": {
+                  "text": {
+                      "field": "female_male_ratio"
+                  }
+              }
+          },
+          {
+              "mark": {
+                  "type": "text",
+                  "x": 50,
+                  "y": 20,
+                  "fontSize": 14,
+                  "font": "Source Sans Pro",
+                  "color": "#CC5500"
+              },
+              "encoding": {
+                  "text": {
+                      "condition":{
+                          "test": "datum.Gender == 'Male'",
+                          "value": "Male"
+                      },
+                      "value": ""
+                  }
+              }
+          },
+          {
+              "mark": {
+                  "type": "text",
+                  "x": 220,
+                  "y": 20,
+                  "fontSize": 14,
+                  "font": "Source Sans Pro",
+                  "color": "#65748e"
+              },
+              "encoding": {
+                  "text": {
+                      "value": "Female"
+                  }
+              }
+          }
+      ]
+      }
+    ],
+    "config": {
+      "style": {
+          "cell": {
+              "stroke": "#f6eee3"
+          }
+      }
+  } 
+  }

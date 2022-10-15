@@ -84,9 +84,7 @@
     <div class="pure-g" style="position: relative; width:100%; ">
       <div class="pure-u-1-1" style="padding-bottom: 2em;">
         <div style="display: table; margin: 0 auto;">
-          <div style="display: table; margin: 0 auto;">
-            <p></p>
-          </div>
+          <div id="line"></div>
         </div>
       </div>
     </div>
@@ -102,17 +100,10 @@
     </div>
 
     <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
-      <div class="pure-u-1-4">
-        <div style="display: table; margin: 0 auto; background-color: #CAEDF8; width: 40px; padding-left: 1em; padding-right: 1em;">
-          <p> Click on a Year & Continent to <br>see the donut! </p>
-          <div id="donut"></div>
+      <div class="pure-u-1-1">
+        <div style="display: table; margin: 0 auto; background-color: #f6eee3; width: 40px; padding-left: 1em; padding-right: 1em;">
+          <div id="combined"></div>
         </div>
-      </div>
-      <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
-        <div style="display: table; margin: 0 auto; background-color: #CAEDF8; width: 40px; padding-left: 1em; padding-right: 1em;">
-          <div id="pyramid"></div>
-        </div>
-        
       </div>
   </div>
 
@@ -120,7 +111,7 @@
 
 
 
-    <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
+    <!-- <div class="pure-g" style="position: relative; width:100%; padding-left: 8em; padding-right: 7em;">
         <div class="pure-u-3-4" style="position: relative; padding-bottom: 2em;">
           <div style=" display: table; margin: 0 auto; background-color: white; width: 40px; padding-left: 1em; padding-right: 1em;">
             <div id="bubble"></div>
@@ -136,7 +127,7 @@
               <span style="font-weight:bold;"> 1,439,324 migrants in China.</span></p>
           </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="pure-g" style="position: relative; width:100%; ">
@@ -178,13 +169,13 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var spec3 = "js/donut.vg.json";
+  var spec3 = "js/concat_gender.vg.json";
   vegaEmbed('#donut', spec3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var spec4 = "js/pyramid.vg.json";
-  vegaEmbed('#pyramid', spec4).then(function(result) {
+  var spec4 = "js/combined.vg.json";
+  vegaEmbed('#combined', spec4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
@@ -195,6 +186,11 @@
 
   var spec6 = "js/chordchart.vg.json";
   vegaEmbed('#chord', spec6).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec7 = "js/line.vg.json";
+  vegaEmbed('#line', spec7).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>

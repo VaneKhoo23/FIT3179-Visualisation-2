@@ -89,13 +89,60 @@
       "mark": {
         "type": "text",
         "font": "Source Sans Pro",
-        "x": 113,
-        "y": 200,
-        "fontWeight": "bold",
-        "color": "seagreen",
-        "fontSize": 11
+        "x": 310,
+        "y": 75,
+        "color": "#00008B",
+        "fontSize": 12
       },
-      "encoding": {"text": {"value": ["Greenland has the HIGHEST Migration Rate."]}}
+      "encoding": {"text": {"value": ["Greenland"]}}
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [{"filter": "datum.properties.NAME== 'Japan'"}],
+      "mark": {
+        "type": "text",
+        "font": "Source Sans Pro",
+        "x": 730,
+        "y": 120,
+        "color": "#00008B",
+        "fontSize": 12
+      },
+      "encoding": {"text": {"value": ["Japan"]}}
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [{"filter": "datum.properties.NAME== 'Japan'"}],
+      "mark": {
+        "type": "text",
+        "font": "Source Sans Pro",
+        "x": 410,
+        "y": 40,
+        "color": "#00008B",
+        "fontSize": 12
+      },
+      "encoding": {"text": {"value": ["Eastern", "Europe"]}}
+    },
+    {
+      "data": {
+        "url": "js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [{"filter": "datum.properties.NAME== 'Japan'"}],
+      "mark": {
+        "type": "text",
+        "font": "Source Sans Pro",
+        "x": 290,
+        "y": 175,
+        "color": "#00008B",
+        "fontSize": 12
+      },
+      "encoding": {"text": {"value": ["Venezuala"]}}
     },
     {
       "data": {
@@ -106,12 +153,12 @@
       "mark": {
         "type": "text",
         "font": "Source Sans Pro",
-        "x": 113,
-        "y": 212,
+        "x": 310,
+        "y": 87,
         "color": "black",
         "fontSize": 10
       },
-      "encoding": {"text": {"value": ["The reason why this could be is because", "there is FREE education, dental services", "& healthcare in Greenland!"]}}
+      "encoding": {"text": {"value": ["has the HIGHEST", "Migration Rate -", "here they have free", "education & healthcare!"]}}
     }
   ],
   "config": {

@@ -1,0 +1,140 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Number of Migrants in the USA by Year",
+        "fontSize": 16
+    },
+    "background": "#f6eee3",
+    "grid": true,
+    "gridColor": "black",
+    "data": { 
+        "url": "data/usa.csv"
+    },
+    "width": 800,
+    "height": 200,
+    "layer": [
+        {
+            "mark": {
+                "type": "area",
+                "point": {
+                    "color": "#FFB6C1",
+                    "size": 35
+                },
+                "opacity": 0.25,
+                "color": "#FFB6C1"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "titleFontSize": 14,
+                    "type": "nominal",
+                    "axis": {
+                        "title": "Year",
+                        "labelAngle": -45,
+                        "labelFontSize": 14
+                    }
+                },
+                "y": {
+                    "field": "Number of Migrants",
+                    "titleFontSize": 14,
+                    "type": "quantitative"
+                },
+                "tooltip": [
+                    {
+                        "field": "Year",
+                        "type": "nominal",
+                        "title": "Year"
+                    },
+                    {
+                        "field": "Number of Migrants",
+                        "type": "quantitative",
+                        "title": "Total Migrants"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+              "y": {
+                "aggregate": "mean",
+                "field": "Number of Migrants",
+                "type": "quantitative",
+                "title": "Number of Migrants"
+              },
+              "color": {"value": "#E75480"},
+              "size": {"value": 2},
+              "tooltip": [{"field": "Number of Migrants", "aggregate":"mean", "title": "Yearly Average Number of Migrants","format":".0f"}]
+            }
+        },
+        {
+            "mark": { "type": "rule", "strokeDash": [4,4], "color": "firebrick", "size": 2},
+            "encoding": {
+              "x": { "value": 748.5 }
+            }
+          },
+        {
+            "transform": [
+              {"filter": "datum.Year == '2020'"},
+              {
+                "calculate": "'The migrant count hit an ALL TIME LOW in 2020.'",
+                "as": "text_annotation"
+              }
+            ],
+            "mark": {"type": "text", "fontWeight": "bold", "dx": 220, "dy": 20},
+            "encoding": {
+              "text": {"field": "text_annotation"},
+              "color": {"value": "firebrick"}
+            }
+        },
+        {
+            "transform": [
+              {"filter": "datum.Year == '2020'"},
+              {
+                "calculate": "'This is mainly affected by the COVID-19 pandemic'",
+                "as": "text_annotation"
+              }
+            ],
+            "mark": {"type": "text", "dx": 220, "dy": 32},
+            "encoding": {
+              "text": {"field": "text_annotation"},
+              "color": {"value": "black"}
+            }
+        },
+        {
+            "transform": [
+              {"filter": "datum.Year == '2020'"},
+              {
+                "calculate": "'& the scrutiny the country faced due'",
+                "as": "text_annotation"
+              }
+            ],
+            "mark": {"type": "text", "dx": 220, "dy": 44},
+            "encoding": {
+              "text": {"field": "text_annotation"},
+              "color": {"value": "black"}
+            }
+        },
+        {
+            "transform": [
+              {"filter": "datum.Year == '2020'"},
+              {
+                "calculate": "'to the killing of George Floyd.'",
+                "as": "text_annotation"
+              }
+            ],
+            "mark": {"type": "text", "dx": 220, "dy": 56},
+            "encoding": {
+              "text": {"field": "text_annotation"},
+              "color": {"value": "black"}
+            }
+        }
+    ],
+    "config": {
+        "style": {
+            "cell": {
+                "stroke": "#f6eee3"
+            }
+        }
+    } 
+}

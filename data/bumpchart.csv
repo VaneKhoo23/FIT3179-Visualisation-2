@@ -1,71 +1,71 @@
-﻿Country,Rank,Year,Number of Migrants
-United States of America,1,1990,23251026
-Russian Federation,2,1990,11524948
-India,3,1990,7594801
-Ukraine,4,1990,6892920
-Pakistan,5,1990,6208204
-Germany,6,1990,5936181
-France,7,1990,5897267
-Saudi Arabia,8,1990,4998445
-Canada,9,1990,4333318
-Iran,10,1990,4291601
-United States of America,1,1995,28451053
-Russian Federation,2,1995,11928927
-Germany,3,1995,7464406
-Ukraine,4,1995,6172338
-France,5,1995,6087993
-Saudi Arabia,6,1995,5122702
-Canada,7,1995,4864778
-United Kingdom,8,1995,4155293
-Australia,9,1995,4153330
-Pakistan,10,1995,3669308
-United States of America,1,2000,34814053
-Russian Federation,2,2000,11900297
-Germany,3,2000,8992631
-India,4,2000,6411331
-France,5,2000,6278718
-Ukraine,6,2000,5527087
-Canada,7,2000,5511914
-Saudi Arabia,8,2000,5263387
-United Kingdom,9,2000,4730165
-Australia,10,2000,4386250
-United States of America,1,2005,39258293
-Russian Federation,2,2005,11667588
-Germany,3,2005,9402447
-France,4,2005,6737600
-Saudi Arabia,5,2005,6501819
-India,6,2005,5936740
-United Kingdom,7,2005,5926156
-Ukraine,8,2005,5050302
-Australia,9,2005,4878030
-Spain,10,2005,4107226
-United States of America,1,2010,44183643
-Russian Federation,2,2010,11194710
-Germany,3,2010,9812263
-Saudi Arabia,4,2010,8429956
-United Arab Emirates,5,2010,7316697
-France,6,2010,7309986
-United Kingdom,7,2010,7119664
-Canada,8,2010,6761226
-Spain,9,2010,6280062
-Australia,10,2010,5882980
-United States of America,1,2015,48178877
-Russian Federation,2,2015,11643276
-Saudi Arabia,3,2015,10771366
-Germany,4,2015,10220418
-United Kingdom,5,2015,8406996
-United Arab Emirates,6,2015,7995126
-France,7,2015,7878338
-Canada,8,2015,7428657
-Australia,9,2015,6729730
-Spain,10,2015,5891208
-United States of America,1,2020,50632836
-Germany,2,2020,15762457
-Saudi Arabia,3,2020,13454842
-Russian Federation,4,2020,11636911
-United Kingdom,5,2020,9359587
-United Arab Emirates,6,2020,8716332
-France,7,2020,8524876
-Canada,8,2020,8049323
-Australia,9,2020,7685860
-Spain,10,2020,6842202
+﻿Country,Rank,Year,Number of Migrants,url,Url,Number of Migrants
+United States of America,1,1990,23251026,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,23 251 026
+Russian Federation,2,1990,11524948,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 524 948
+India,3,1990,7594801,data/images/india.png,https://cdn-icons-png.flaticon.com/512/197/197419.png,7 594 801
+Ukraine,4,1990,6892920,data/images/ukraine.png,https://cdn-icons-png.flaticon.com/512/197/197572.png,6 892 920
+Pakistan,5,1990,6208204,data/images/pakistan.png,https://cdn-icons-png.flaticon.com/512/197/197606.png,6 208 204
+Germany,6,1990,5936181,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,5 936 181
+France,7,1990,5897267,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,5 897 267
+Saudi Arabia,8,1990,4998445,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,4 998 445
+Canada,9,1990,4333318,data/images/canada.png,https://cdn-icons-png.flaticon.com/512/197/197430.png,4 333 318
+Iran,10,1990,4291601,data/images/iran.png,https://cdn-icons-png.flaticon.com/512/197/197574.png,4 291 601
+United States of America,1,1995,28451053,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,28 451 053
+Russian Federation,2,1995,11928927,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 928 927
+Germany,3,1995,7464406,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,7 464 406
+Ukraine,4,1995,6172338,data/images/ukraine.png,https://cdn-icons-png.flaticon.com/512/197/197572.png,6 172 338
+France,5,1995,6087993,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,6 087 993
+Saudi Arabia,6,1995,5122702,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,5 122 702
+Canada,7,1995,4864778,data/images/canada.png,https://cdn-icons-png.flaticon.com/512/197/197430.png,4 864 778
+United Kingdom,8,1995,4155293,data/images/united-kingdom.png,https://cdn-icons-png.flaticon.com/512/197/197374.png,4 155 293
+Australia,9,1995,4153330,data/images/australia.png,https://cdn-icons-png.flaticon.com/512/197/197507.png,4 153 330
+Pakistan,10,1995,3669308,data/images/pakistan.png,https://cdn-icons-png.flaticon.com/512/197/197606.png,3 669 308
+United States of America,1,2000,34814053,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,34 814 053
+Russian Federation,2,2000,11900297,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 900 297
+Germany,3,2000,8992631,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,8 992 631
+India,4,2000,6411331,data/images/india.png,https://cdn-icons-png.flaticon.com/512/197/197419.png,6 411 331
+France,5,2000,6278718,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,6 278 718
+Ukraine,6,2000,5527087,data/images/ukraine.png,https://cdn-icons-png.flaticon.com/512/197/197572.png,5 527 087
+Canada,7,2000,5511914,data/images/canada.png,https://cdn-icons-png.flaticon.com/512/197/197430.png,5 511 914
+Saudi Arabia,8,2000,5263387,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,5 263 387
+United Kingdom,9,2000,4730165,data/images/united-kingdom.png,https://cdn-icons-png.flaticon.com/512/197/197374.png,4 730 165
+Australia,10,2000,4386250,data/images/australia.png,https://cdn-icons-png.flaticon.com/512/197/197507.png,4 386 250
+United States of America,1,2005,39258293,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,39 258 293
+Russian Federation,2,2005,11667588,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 667 588
+Germany,3,2005,9402447,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,9 402 447
+France,4,2005,6737600,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,6 737 600
+Saudi Arabia,5,2005,6501819,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,6 501 819
+India,6,2005,5936740,data/images/india.png,https://cdn-icons-png.flaticon.com/512/197/197419.png,5 936 740
+United Kingdom,7,2005,5926156,data/images/united-kingdom.png,https://cdn-icons-png.flaticon.com/512/197/197374.png,5 926 156
+Ukraine,8,2005,5050302,data/images/ukraine.png,https://cdn-icons-png.flaticon.com/512/197/197572.png,5 050 302
+Australia,9,2005,4878030,data/images/australia.png,https://cdn-icons-png.flaticon.com/512/197/197507.png,4 878 030
+Spain,10,2005,4107226,data/images/spain.png,https://cdn-icons-png.flaticon.com/512/197/197593.png,4 107 226
+United States of America,1,2010,44183643,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,44 183 643
+Russian Federation,2,2010,11194710,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 194 710
+Germany,3,2010,9812263,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,9 812 263
+Saudi Arabia,4,2010,8429956,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,8 429 956
+United Arab Emirates,5,2010,7316697,data/images/united-arab-emirates.png,https://cdn-icons-png.flaticon.com/512/5921/5921904.png,7 316 697
+France,6,2010,7309986,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,7 309 986
+United Kingdom,7,2010,7119664,data/images/united-kingdom.png,https://cdn-icons-png.flaticon.com/512/197/197374.png,7 119 664
+Canada,8,2010,6761226,data/images/canada.png,https://cdn-icons-png.flaticon.com/512/197/197430.png,6 761 226
+Spain,9,2010,6280062,data/images/spain.png,https://cdn-icons-png.flaticon.com/512/197/197593.png,6 280 062
+Australia,10,2010,5882980,data/images/australia.png,https://cdn-icons-png.flaticon.com/512/197/197507.png,8 049 323
+United States of America,1,2015,48178877,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,48 178 877
+Russian Federation,2,2015,11643276,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 643 276
+Saudi Arabia,3,2015,10771366,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,10 771 366
+Germany,4,2015,10220418,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,10 220 418
+United Kingdom,5,2015,8406996,data/images/united-kingdom.png,https://cdn-icons-png.flaticon.com/512/197/197374.png,8 406 996
+United Arab Emirates,6,2015,7995126,data/images/united-arab-emirates.png,https://cdn-icons-png.flaticon.com/512/5921/5921904.png,7 995 126
+France,7,2015,7878338,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,7 878 338
+Canada,8,2015,7428657,data/images/canada.png,https://cdn-icons-png.flaticon.com/512/197/197430.png,7 428 657
+Australia,9,2015,6729730,data/images/australia.png,https://cdn-icons-png.flaticon.com/512/197/197507.png,6 729 730
+Spain,10,2015,5891208,data/images/spain.png,https://cdn-icons-png.flaticon.com/512/197/197593.png,5 891 208
+United States of America,1,2020,50632836,data/images/united-states-america.png,https://cdn-icons-png.flaticon.com/512/197/197484.png,50 632 836
+Germany,2,2020,15762457,data/images/germany.png,https://cdn-icons-png.flaticon.com/512/197/197571.png,15 762 457
+Saudi Arabia,3,2020,13454842,data/images/saudi-arabia.png,https://cdn-icons-png.flaticon.com/512/197/197578.png,13 454 842
+Russian Federation,4,2020,11636911,data/images/russia.png,https://cdn-icons-png.flaticon.com/512/4628/4628645.png,11 636 911
+United Kingdom,5,2020,9359587,data/images/united-kingdom.png,https://cdn-icons-png.flaticon.com/512/197/197374.png,9 359 587
+United Arab Emirates,6,2020,8716332,data/images/united-arab-emirates.png,https://cdn-icons-png.flaticon.com/512/5921/5921904.png,8 716 332
+France,7,2020,8524876,data/images/france.png,https://cdn-icons-png.flaticon.com/512/197/197560.png,8 524 876
+Canada,8,2020,8049323,data/images/canada.png,https://cdn-icons-png.flaticon.com/512/197/197430.png,8 049 323
+Australia,9,2020,7685860,data/images/australia.png,https://cdn-icons-png.flaticon.com/512/197/197507.png,7 685 860
+Spain,10,2020,6842202,data/images/spain.png,https://cdn-icons-png.flaticon.com/512/197/197593.png,6 842 202

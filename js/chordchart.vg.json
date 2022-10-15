@@ -154,21 +154,9 @@
       {
         "name": "stackNames",
         "type": "ordinal",
-        "range": ["Source", "Destination"],
+        "range": ["Origin", "Destination"],
         "domain": ["stk1", "stk2"]
       }
-    ],
-    "axes": [
-      {
-        "orient": "bottom",
-        "scale": "x",
-        "encode": {
-          "labels": {
-            "update": {"text": {"scale": "stackNames", "field": "value"}}
-          }
-        }
-      },
-      {"orient": "left", "scale": "y"}
     ],
     "marks": [
       {
@@ -195,7 +183,7 @@
               "signal": "!groupSelector && (groupHover.stk1 == datum.stk1 || groupHover.stk2 == datum.stk2) ? 1 : 0"
             },
             "tooltip": {
-              "signal": "datum.stk1 + ' → ' + datum.stk2 + '    ' + format(datum.size, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'"
+              "signal": "datum.stk1 + ' to ' + datum.stk2 + ':    ' + format(datum.size, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'"
             }
           },
           "hover": {"strokeOpacity": {"value": 1}}
@@ -235,6 +223,7 @@
             "align": {"signal": "datum.rightLabel ? 'left' : 'right'"},
             "baseline": {"value": "middle"},
             "fontWeight": {"value": "bold"},
+            "fontSize": {"value": 14},
             "text": {
               "signal": "abs(datum.scaledY0-datum.scaledY1) > 13 ? datum.grpId : ''"
             }
@@ -290,6 +279,7 @@
                     "align": {"value": "center"},
                     "baseline": {"value": "middle"},
                     "fontWeight": {"value": "bold"},
+                    "fontSize": {"value": 13},
                     "text": {"value": "Show All"}
                   }
                 }
