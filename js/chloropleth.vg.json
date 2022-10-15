@@ -43,7 +43,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "data/data_migration.csv"
+              "url": "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/data_migration.csv"
             },
             "key": "Country",
             "fields": ["Migrants per 100k Population"]
@@ -95,7 +95,8 @@
         "x": 310,
         "y": 75,
         "color": "#00008B",
-        "fontSize": 12
+        "fontSize": 12,
+        "fontStyle": "bold"
       },
       "encoding": {"text": {"value": ["Greenland"]}}
     },
@@ -111,7 +112,8 @@
         "x": 730,
         "y": 120,
         "color": "#00008B",
-        "fontSize": 12
+        "fontSize": 12,
+        "fontStyle": "bold"
       },
       "encoding": {"text": {"value": ["Japan"]}}
     },
@@ -127,7 +129,8 @@
         "x": 410,
         "y": 40,
         "color": "#00008B",
-        "fontSize": 12
+        "fontSize": 12,
+        "fontStyle": "bold"
       },
       "encoding": {"text": {"value": ["Eastern", "Europe"]}}
     },
@@ -143,7 +146,8 @@
         "x": 290,
         "y": 175,
         "color": "#00008B",
-        "fontSize": 12
+        "fontSize": 12,
+        "fontStyle": "bold"
       },
       "encoding": {"text": {"value": ["Venezuala"]}}
     },

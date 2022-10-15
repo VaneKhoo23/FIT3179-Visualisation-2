@@ -38,7 +38,7 @@
     "hconcat": [
       {
         "data": {
-          "url": "data/4_population_pyramid.csv"
+          "url": "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/4_population_pyramid.csv"
         },
         "transform": [
           {
@@ -115,7 +115,7 @@
       },
       {
         "data": {
-          "url": "data/4_population_pyramid.csv"
+          "url": "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/4_population_pyramid.csv"
         },
         "transform": [
           {
@@ -178,7 +178,7 @@
       },
       {
         "data": { 
-          "url": "data/3_gender_pie.csv"
+          "url": "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/3_gender_pie.csv"
           },
           "transform": [
             {

@@ -2,9 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 400,
     "height": 500,
-    "title": "Number of Migrants by Country and GDP",
+    "background": "#f6eee3",
+    "title": {"text": "Number of Migrants by Country and GDP","fontSize": 16},
     "data": {
-    "url": "data/data_migration.csv"
+    "url": "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/data_migration.csv"
     },
     "mark": "circle",
     "params": [

@@ -9,7 +9,7 @@
     "height": 400,
     "background": "#f6eee3",
     "data": {
-        "url":  "data/bumpchart.csv"
+        "url":  "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/bumpchart.csv"
     },
     "transform": [
         {
