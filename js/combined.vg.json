@@ -213,11 +213,6 @@
                   },
                   "tooltip": [
                       {
-                          "field": "Year",
-                          "type": "nominal",
-                          "title": "Year"
-                      },
-                      {
                           "field": "Gender",
                           "type": "nominal",
                           "title": "Gender"
