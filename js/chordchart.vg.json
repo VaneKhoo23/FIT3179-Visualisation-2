@@ -1,5 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.2.json",
+    "title": {
+      "text": "Proportion of Migrants by Continent",
+      "fontSize": 16,
+      "anchor": "middle"
+    },
     "height": 700,
     "width": 800,
     "data": [
