@@ -12,7 +12,8 @@ p {
 hr {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  fill:black;
+  fill:#f7e7ce;
+  background-color: #888888;
 }
 
 .page{
