@@ -3,7 +3,7 @@
     "width": 400,
     "height": 500,
     "background": "#f6eee3",
-    "title": {"text": "Number of Migrants by Country and GDP","fontSize": 16},
+    "title": {"text": "Number of Migrants by Country and GDP (2020)","fontSize": 16},
     "data": {
     "url": "https://raw.githubusercontent.com/VaneKhoo23/FIT3179-Visualisation-2/main/data/data_migration.csv"
     },
